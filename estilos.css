@@ -5,68 +5,87 @@
 }
 
 body {
+    height: 100vh;
     font-family: 'arial';
-    background-color: black;
+    background-color: #111111;
     color: white;
 }
 
-.header-inner-container {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.navbar {
-    padding: 1rem;
-    position: sticky; /* Define que a barra vai continuar fixa na tela mais ainda vai se mexer */
+nav.menu-lateral {   /* Definição do menu lateral */
+    width: 70px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 rgb(0, 255, 255);  /* Verificar se pode arredondar */
+    position: fixed;
     top: 0;
-    box-shadow: 10px 0px 10px rgb(4, 28, 105);
-    z-index: 99;
+    left: 0;
+    overflow: hidden;  /* Esconde as letras quando menu-lateral estiver reduzido */
+    transition: 0.8s;  /* Tempo para a abertura da Barra Lateral */
 }
 
-.navbar > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Define que os espaços entre eles é igual */
+nav.menu-lateral.expandir {  /* Classe sendo utilizada no JavaScript */
+    width: 270px;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
+.btn-expandir {
+    width: 100%;
+    padding-left: 2px;
 }
 
-.nav-icon-container {  /* Editando a imagem da SideBar */
-    display: flex;
-    align-items: center;
-}
-
-.nav-icon-container img {
-    width: 30px;
-    cursor: pointer;
-}
-
-.nav-icon-container img:first-child {
-    margin-right: 1rem;
-}
-
-nav ul li {
+.btn-expandir > i {
     color: cyan;
-    margin-right: 1.5rem;
+    font-size: 24px;
     cursor: pointer;
 }
 
-nav ul li:hover {
-    transform: translateY(-1px); /* Defini a pequena subida da palavra */
-    transition: all 0.2s; /* Quanto tempo leva para fazer as mudanças */
-    font-weight: bold;
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: 0.2s;
+}
+
+ul li.ativo {   /* Classe sendo utilizada no JavaScript */
+    background-color: rgba(0, 255, 255, 0.9);
+}
+
+ul li.item-menu:hover {
+    background-color: cyan;
+}
+
+ul li.item-menu a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 70px;
+    transition: 0.6s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link {  /* Quando a class.expandir for ativada ira execultar esse comando */
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i {
+    font-size: 25px;    /* Define o tamanho dos icones */
 }
 
 header {
     display: flex;
     padding: 1.5rem;
     align-items: center;
-    background-image: url(); /* Verificar mais Depois */
+    background-image: url();  /* Verificar mais Depois */
 }
 
 .logo {
@@ -81,7 +100,7 @@ header {
     color: white;
 }
 
-.logo-img {
+.logo-img {     /* Medidas que a imagem/logo esta usando */
     width: 18%;
     height: 15%;
     margin: 3% 5% 3% 7%;
