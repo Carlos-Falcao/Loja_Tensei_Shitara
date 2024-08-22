@@ -9,6 +9,8 @@ body {
     font-family: 'arial';
     background-color: #111111;
     color: white;
+    display: flex;
+
 }
 
 nav.menu-lateral {   /* Definição do menu lateral */
@@ -17,7 +19,7 @@ nav.menu-lateral {   /* Definição do menu lateral */
     background-color: rgba(0, 0, 0, 0.8);
     padding: 40px 0 40px 1%;
     box-shadow: 3px 0 0 rgb(0, 255, 255);  /* Verificar se pode arredondar */
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     overflow: hidden;  /* Esconde as letras quando menu-lateral estiver reduzido */
@@ -50,10 +52,14 @@ ul li.item-menu {
 
 ul li.ativo {   /* Classe sendo utilizada no JavaScript */
     background-color: rgba(0, 255, 255, 0.9);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 ul li.item-menu:hover {
     background-color: cyan;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 ul li.item-menu a{
