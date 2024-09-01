@@ -7,7 +7,11 @@
 body {
     height: 100vh;
     font-family: 'arial';
-    background-color: #111111;
+    background-image: url(fundo-body.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
     display: flex;
 
