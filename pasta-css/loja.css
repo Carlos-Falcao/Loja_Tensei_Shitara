@@ -7,7 +7,11 @@
 body {
     height: 100vh;
     font-family: 'arial';
-    background-color: #111111;
+    background-image: url(../fundo-body.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
     display: flex;
 
@@ -21,7 +25,7 @@ nav.menu-lateral {   /* Definição do menu lateral */
     background-color: rgba(0, 0, 0, 0.8);
     padding: 40px 0 40px 1%;
     box-shadow: 3px 0 0 rgb(0, 255, 255);  /* Verificar se pode arredondar */
-    position: sticky;                           /* AO SER COLOCADO "STICK" A NAVBAR NÃO DESCE COM A TELA */
+    position: fixed;                           /* AO SER COLOCADO "STICK" A NAVBAR NÃO DESCE COM A TELA */
     top: 0;
     left: 0;
     overflow: hidden;  /* Esconde as letras quando menu-lateral estiver reduzido */
@@ -98,15 +102,25 @@ header {
 }
 
 .logo-img {     /* Medidas que a imagem/logo esta usando */
-   width: 100%;
-   height: 100%;
+    width: 1000px;
+    margin-left: 30%;
 }
 
-
-/*
-
 main {
-    display: ;
+    margin-left: 75px;
+    transition: all 0.8s;
+}
+
+.produtos {
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.produtos > h2 {
+    color: blueviolet;
+    margin-left: 45%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
 }
 
 .lista-produtos {
@@ -114,7 +128,7 @@ main {
     flex-wrap: wrap;
 }
 
-.lista_produtos_item {
+.lista_produto_item {
     width: 15%;
     margin: 1% 5% 2%;
     text-align: center;
@@ -126,22 +140,21 @@ main {
     box-shadow: 3px 2px 2px black, 6px 5px 6px blueviolet;
 }
 
-.curso_imagem {       /* Sem nada no momento 
+.produto_imagem {       /* Sem nada no momento */
     width: 90%;
 }
 
-.lista_produtos_item > h3 {
+.lista_produto_item > h3 {
     text-align: center;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: bold;
 }
 
-.lista_produtos_item:hover {
+.lista_produto_item:hover {
     box-shadow: 5px 4px 4px black, 10px 9px 10px red;
 }
 
 .nome_produto {
     text-align: left;
 }
-*/

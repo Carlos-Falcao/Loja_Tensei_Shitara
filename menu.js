@@ -19,5 +19,10 @@ var btnExp = document.querySelector('#btn-exp');
 var menuSide = document.querySelector('.menu-lateral');
 
 btnExp.addEventListener('click', function(){
-    menuSide.classList.toggle('expandir')
+    menuSide.classList.toggle('expandir');
+    if(menuSide.classList.contains('expandir')) {
+        document.querySelector('main').style.marginLeft = '280px';
+    } else {
+        document.querySelector('main').style.marginLeft = '75px';
+    }
 })

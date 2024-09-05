@@ -7,7 +7,7 @@
 body {
     height: 100vh;
     font-family: 'arial';
-    background-image: url(fundo-body.avif);
+    background-image: url(../fundo-body.avif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -19,11 +19,11 @@ body {
 
 nav.menu-lateral {   /* Definição do menu lateral */
     width: 70px;
-    height: 100%;
+    height: 150%;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 40px 0 40px 1%;
     box-shadow: 3px 0 0 rgb(0, 255, 255);  /* Verificar se pode arredondar */
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;  /* Esconde as letras quando menu-lateral estiver reduzido */
@@ -114,4 +114,9 @@ header {
     width: 18%;
     height: 15%;
     margin: 3% 5% 3% 7%;
+}
+
+main {
+    margin-left: 75px;
+    transition: all 0.8s;
 }
